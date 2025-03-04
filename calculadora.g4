@@ -1,7 +1,11 @@
 grammar calculadora;
 
-// Reglas léxicas
-NUMBER  : [0-9]+ ;
+SIN     : 'sin' ;
+COS     : 'cos' ;
+TAN     : 'tan' ;
+SQRT    : 'sqrt' ; 
+LOG3    : 'log3' ;
+NUMBER  : '-'?[0-9]+('.'[0-9]+)? ;
 WS      : [ \t\r\n]+ -> skip ;
 PLUS    : '+' ;
 MINUS   : '-' ;
@@ -10,11 +14,16 @@ DIV     : '/' ;
 LPAREN  : '(' ;
 RPAREN  : ')' ;
 
-// Reglas sintácticas con etiquetas
-expr    : expr MUL expr   # Mul
-        | expr DIV expr   # Div
-        | expr PLUS expr  # Add
-        | expr MINUS expr # Sub
-        | NUMBER          # Number
-        | LPAREN expr RPAREN # Parens
+
+expr    : expr MUL expr        # Mul
+        | expr DIV expr        # Div
+        | expr PLUS expr       # Add
+        | expr MINUS expr      # Sub
+        | SIN LPAREN expr RPAREN # SinFunc
+        | COS LPAREN expr RPAREN # CosFunc
+        | TAN LPAREN expr RPAREN # TanFunc
+        | SQRT LPAREN expr RPAREN # SqrtFunc
+        | LOG3 LPAREN expr RPAREN # log3Func
+        | NUMBER               # Number
+        | LPAREN expr RPAREN   # Parens
         ;

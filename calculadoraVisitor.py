@@ -24,8 +24,18 @@ class calculadoraVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by calculadoraParser#TanFunc.
+    def visitTanFunc(self, ctx:calculadoraParser.TanFuncContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by calculadoraParser#Number.
     def visitNumber(self, ctx:calculadoraParser.NumberContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by calculadoraParser#log3Func.
+    def visitLog3Func(self, ctx:calculadoraParser.Log3FuncContext):
         return self.visitChildren(ctx)
 
 
@@ -36,6 +46,21 @@ class calculadoraVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by calculadoraParser#Parens.
     def visitParens(self, ctx:calculadoraParser.ParensContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by calculadoraParser#CosFunc.
+    def visitCosFunc(self, ctx:calculadoraParser.CosFuncContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by calculadoraParser#SqrtFunc.
+    def visitSqrtFunc(self, ctx:calculadoraParser.SqrtFuncContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by calculadoraParser#SinFunc.
+    def visitSinFunc(self, ctx:calculadoraParser.SinFuncContext):
         return self.visitChildren(ctx)
 
 

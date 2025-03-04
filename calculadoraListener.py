@@ -35,12 +35,30 @@ class calculadoraListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by calculadoraParser#TanFunc.
+    def enterTanFunc(self, ctx:calculadoraParser.TanFuncContext):
+        pass
+
+    # Exit a parse tree produced by calculadoraParser#TanFunc.
+    def exitTanFunc(self, ctx:calculadoraParser.TanFuncContext):
+        pass
+
+
     # Enter a parse tree produced by calculadoraParser#Number.
     def enterNumber(self, ctx:calculadoraParser.NumberContext):
         pass
 
     # Exit a parse tree produced by calculadoraParser#Number.
     def exitNumber(self, ctx:calculadoraParser.NumberContext):
+        pass
+
+
+    # Enter a parse tree produced by calculadoraParser#log3Func.
+    def enterLog3Func(self, ctx:calculadoraParser.Log3FuncContext):
+        pass
+
+    # Exit a parse tree produced by calculadoraParser#log3Func.
+    def exitLog3Func(self, ctx:calculadoraParser.Log3FuncContext):
         pass
 
 
@@ -59,6 +77,33 @@ class calculadoraListener(ParseTreeListener):
 
     # Exit a parse tree produced by calculadoraParser#Parens.
     def exitParens(self, ctx:calculadoraParser.ParensContext):
+        pass
+
+
+    # Enter a parse tree produced by calculadoraParser#CosFunc.
+    def enterCosFunc(self, ctx:calculadoraParser.CosFuncContext):
+        pass
+
+    # Exit a parse tree produced by calculadoraParser#CosFunc.
+    def exitCosFunc(self, ctx:calculadoraParser.CosFuncContext):
+        pass
+
+
+    # Enter a parse tree produced by calculadoraParser#SqrtFunc.
+    def enterSqrtFunc(self, ctx:calculadoraParser.SqrtFuncContext):
+        pass
+
+    # Exit a parse tree produced by calculadoraParser#SqrtFunc.
+    def exitSqrtFunc(self, ctx:calculadoraParser.SqrtFuncContext):
+        pass
+
+
+    # Enter a parse tree produced by calculadoraParser#SinFunc.
+    def enterSinFunc(self, ctx:calculadoraParser.SinFuncContext):
+        pass
+
+    # Exit a parse tree produced by calculadoraParser#SinFunc.
+    def exitSinFunc(self, ctx:calculadoraParser.SinFuncContext):
         pass
 
 
